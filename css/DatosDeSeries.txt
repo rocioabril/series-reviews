@@ -1,0 +1,54 @@
+American Horror Story
+Serie estadounidense de antología y horror creada por Ryan Murphy y Brad Falchuk para la cadena de cable FX. Cada temporada se concibe como una miniserie autónoma, siguiendo un conjunto diferente de personajes y escenarios, y un argumento con su propio «principio, medio y fin». La serie atrae constantemente altas audiencias para el canal FX, siendo su primera temporada la nueva serie de cable más vista de 2011.
+
+Terror
+
+
+
+
+El Señor de los Anillos: los Anillos de Poder 
+
+Inspirada en el universo de las obras de J. R. R. Tolkien, desarrollada por J.D. Payne y Patrick McKay para el servicio de streaming Prime Video, y ambientada en la Segunda Edad de la Tierra Media, antes de los acontecimientos de la novela y las películas de la trilogía de El Señor de los Anillos. Producida por Amazon Studios, en colaboración con Tolkien Estate and Trust, HarperCollins y New Line Cinema, contó con la dirección de Juan Antonio Bayona (dos episodios), Wayne Yip (cuatro episodios) y Charlotte Brändström (dos episodios) en su primera temporada.
+
+Fantasía
+
+
+
+
+Juego de tronos
+
+Serie de drama y fantasía medieval desarrollada por David Benioff y D. B. Weiss y producida por la cadena HBO. Su argumento está inspirado en la serie de novelas Canción de hielo y fuego, escrita por el estadounidense George R. R. Martin, y relata las vivencias de un grupo de personajes de distintas casas nobiliarias en el continente ficticio de Poniente para tener el control del Trono de Hierro y gobernar los siete reinos que conforman el territorio.
+
+Fantasía
+
+
+
+
+La Casa del Dragón 
+
+Serie dirigida por Clare Kilner, Geeta Patel, Miguel Sapochnik y Greg Yaitanes. El guion ha sido escrito por Ryan Condal, George R. R. Martin y Miguel Sapochnik y producida por HBO.1​2​ Se estrenó el 21 de agosto de 2022. La primera temporada que consta de diez episodios2​ está protagonizada por Eve Best, Paddy Considine, Olivia Cooke, Emma D'Arcy, Rhys Ifans y Matt Smith.
+
+Fantasía
+
+
+Breaking Bad
+
+Creada y producida por Vince Gilligan, narra la historia de Walter White (Bryan Cranston), un profesor de química con problemas económicos a quien le diagnostican un cáncer de pulmón inoperable. Para pagar su tratamiento y asegurar el futuro económico de su familia, comienza a cocinar y vender metanfetamina,4​ junto con Jesse Pinkman (Aaron Paul), un antiguo alumno suyo. La serie, ambientada y producida en Albuquerque (Nuevo México), se caracteriza por sus escenarios desérticos y por la tendencia en la historia de poner a sus personajes en situaciones que aparentemente no tienen salida, lo que llevó a que su creador la describa como un wéstern contemporáneo.
+
+Drama
+
+INSERT INTO series(titulo, descripcion, genero, poster)
+	VALUES("", "", "", ".jpg");
+
+
+
+INSERT INTO series(titulo, descripcion, genero, poster)
+	VALUES("Perdidos", "El vuelo 815 se estrella en una isla desierta, exuberante y misteriosa. Enseguida, los sobrevivientes deben encontrar la forma de adaptarse al nuevo ambiente, a la vez que descubren un extraño sistema de seguridad, refugios subterráneos y un violento grupo de supervivientes.", "drama", "./img/Posters/Perdidos.jpg");
+    
+    
+INSERT INTO series(titulo, descripcion, genero, poster)
+	VALUES("Dexter", "", "drama", "./img/Posters/Dexter.jpg");
+    
+    
+INSERT INTO series(titulo, descripcion, genero, poster)
+	VALUES("", "", "", "./img/Posters/.jpg");
