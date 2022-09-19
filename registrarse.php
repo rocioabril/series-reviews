@@ -15,7 +15,7 @@
 
 <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+    <div class="modal-content bg-dark">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Registrarse</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -40,7 +40,7 @@
                 <div class="invalid-feedback">Tu contraseña debe tener entre 6 y 12 caracteres</div>
             </div>
             <div class="form-group m-3">
-              <button class="btn btn-primary m-2" type="submit" name="enviar" id="enviar">Crear cuenta</button>
+              <button class="btn btn-warning m-2" type="submit" name="enviar" id="enviar">Crear cuenta</button>
             </div>
         </form>
 
@@ -50,7 +50,7 @@
 
       <div class="modal-footer d-flex justify-content-center">
         ¿Ya tienes cuenta?
-        <a href="registrarse.php"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <a href="registrarse.php" class="text-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Entra a tu cuenta
         </a>
        

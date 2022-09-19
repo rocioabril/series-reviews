@@ -1,7 +1,7 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content bg-dark">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -47,14 +47,14 @@
         }
         ?>
       <div class="d-flex m-3 justify-content-stretch">
-        <button type="submit" class="btn btn-primary">Entrar</button>
+        <button type="submit" class="btn btn-warning">Entrar</button>
       </div>
     </section>
 </div>
       </div>
       <div class="modal-footer d-flex justify-content-center">
         ¿Aun no tienes cuenta?
-        <a href="registrarse.php"  data-bs-toggle="modal" data-bs-target="#signupModal">
+        <a href="registrarse.php" class="text-warning" data-bs-toggle="modal" data-bs-target="#signupModal">
                 Registrate
         </a>
 
