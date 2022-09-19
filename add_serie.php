@@ -8,7 +8,7 @@
     <title>Añadir Serie</title>
 </head>
 <body>
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="titulo" class="form-label">Título</label>
         <input name="titulo" type="text"  class="form-control">
@@ -49,24 +49,59 @@ include("funciones.php");
 
 if($_POST){
 
-    $titulo = $_POST["titulo"];
-    $genero = $_POST["genero"];
-    $descripcion = $_POST["descripcion"];
-    $poster = $_POST["poster"];
 
-//conectar, escribir la consulta y consultar:
+        $fileTmpPath = $_FILES['poster']['tmp_name']; // carpeta y nombre temporal
+        $fileName = $_FILES['poster']['name']; // nombre del archivo
+        $fileSize = $_FILES['poster']['size']; // tamaño del archivo en bytes
+        $fileType = $_FILES['poster']['type']; // tipo del archivo
 
-    //conectar
-    $conexion = conectar_db();
 
-    //escribir consulta
-    $consulta = "INSERT INTO series(titulo, genero, descripcion, poster)
-    VALUES('$titulo', '$genero', '$descripcion', '$poster')";
+        $fileNameCmps = explode(".", $fileName);            
+        $fileExtension = strtolower(end($fileNameCmps));   
+    
+        // sanitizar file-name
+        $newFileName = md5(time() . $fileName) . '.' . $fileExtension; // al nombre original le por delante pone el time y aplica el md5 que lo encripta y le da un código único
+        
+        
+        //Array de extensiones permitidas
+        $allowedfileExtensions = array('jpg', 'gif', 'png');
+        $max_file_size = 250000;
 
-    //consultar
-    $resultado_consulta = $conexion->query($consulta);
+        if (in_array($fileExtension, $allowedfileExtensions) && $fileSize < $max_file_size) { // Compara si la extensión del array "fileExtension" está dentro de las extensiones permitidas "allowedfileExtensions"
+        
+            $uploadFileDir = './Posters/';                   //defino donde será  carpeta a la que vamos a mover los archivos ->"upload_files"
+            $dest_path = $uploadFileDir . $newFileName;         //"dest_path" es la carpeta y el archivo donde se va a guardar
+      
+            if(move_uploaded_file($fileTmpPath, $dest_path)) { // Muevo los archivos de la carpeta temporal a la carpera definida
+            
+                
+                
+                $titulo = $_POST["titulo"];
+                $genero = $_POST["genero"];
+                $descripcion = $_POST["descripcion"];
+                $poster = $newFileName;
 
-    header("Location: seriesCards.php");
+            //conectar, escribir la consulta y consultar:
+
+                //conectar
+                $conexion = conectar_db();
+
+                //escribir consulta
+                $consulta = "INSERT INTO series(titulo, genero, descripcion, poster)
+                VALUES('$titulo', '$genero', '$descripcion', '$poster')";
+
+                //consultar
+                $resultado_consulta = $conexion->query($consulta);
+                
+                
+                
+                
+                header("Location: index.php");
+            }
+        }
+    
+
+
 
 }
   ?>
