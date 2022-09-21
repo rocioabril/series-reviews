@@ -85,7 +85,7 @@ $resultado_consulta->fetch_assoc();
           <div class="card-body d-flex flex-column mb-3">
             <h5 class="card-title p-2"">' . $serie["titulo"] . '</h5>
             <p class="card-text p-2"">' . substr($serie["descripcion"], 0, 100)  . '...</p>
-            <a href="#" class="btn btn-warning botones_vermas p-2"><b>VER MAS</b></a>
+            <a href="serie.php?id_series=' . $serie["id_series"] . '" id="ver_mas" class="btn btn-warning botones_vermas p-2"><b>VER MAS</b></a>
           </div>
         </div>';
         }

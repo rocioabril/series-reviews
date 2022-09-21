@@ -1,0 +1,147 @@
+
+
+  .background-black{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      margin-top: 98px;
+      background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6561975131849616) 50%, rgba(0,0,0,1) 100%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      padding: 50px 0 0 0;
+    }
+
+    .info-serie {
+      position: absolute;
+      top: 50%;
+      transform: translate(50%, -50%);
+      z-index: 5;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      gap: 20px 20px;
+      padding-top: 100px;
+    }
+
+    .info-serie-derecha{
+      color: white;
+      width: 300px;
+    }
+
+    .info-serie-izquierda{
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    @media (max-width: 1000px) {
+    .info-serie {
+    flex-direction: column;
+    margin-top: 250px;
+  }
+}
+    .botones{
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 5px;
+    }
+
+    .descripcion{
+      font-size: 16px;
+
+    }
+
+    .poster-serie{
+      border-radius: 25px;
+
+    }
+    .contenedorComentarios{
+      width: 100%;
+      border-radius: 25px;
+      margin: 50px auto;
+      box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .form1 {
+      margin: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #nuevoComentario{
+      border: none;
+      background-color: #eee;
+      border-radius: 5px;
+      height: 80px;
+    }
+
+    #nuevo_comentar {
+      width: 500px;
+      border: none;
+      background-color: #eee;
+      border-radius: 5px;
+    }
+
+
+    #add_item:hover {
+      cursor: pointer;
+    }
+
+    .contenedor_lista{
+      margin: 0;
+      background-color: black;
+      width: 100 vh;
+      height: 100px;
+    }
+
+    #lista {
+      width: 100%;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style-type: none;
+      padding: 0px;
+      background: black;
+
+    }
+
+    .items {
+      background-color: rgb(245, 245, 245);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1)
+    }
+
+    .close {
+      float: right;
+      color: #c3c1c2;
+    }
+
+    .close:hover {
+      cursor: pointer;
+    }
+
+    .iconoLog {
+      width: 100px;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .footerResena {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    .footerResena button{
+      border: none;
+    }
+
+    #agregarComentario{
+      margin: 80px
+    }
