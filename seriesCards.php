@@ -3,7 +3,7 @@
 <style>
 
     body{
-        background-color: #191818;
+        background-color: #000 !important;
         color: white;
     }
 
@@ -84,6 +84,7 @@ $resultado_consulta->fetch_assoc();
           <img src="./Posters/'. $serie["poster"] . '" class="card-img-top img_cards img-responsive" alt="poster de ' . $serie["poster"] . '">
           <div class="card-body d-flex flex-column mb-3">
             <h5 class="card-title p-2"">' . $serie["titulo"] . '</h5>
+            <!--<img src="./Estrellas/4.png" width="150px">-->
             <p class="card-text p-2"">' . substr($serie["descripcion"], 0, 100)  . '...</p>
             <a href="serie.php?id_series=' . $serie["id_series"] . '" id="ver_mas" class="btn btn-warning botones_vermas p-2"><b>VER MAS</b></a>
           </div>

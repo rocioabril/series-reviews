@@ -25,6 +25,7 @@ if($genero === "todas"){
           <img src="./Posters/'. $serie["poster"] . '" class="card-img-top" alt="poster de ' . $serie["poster"] . '">
           <div class="card-body d-flex flex-column mb-3">
             <h5 class="card-title p-2"">' . $serie["titulo"] . '</h5>
+            <!--<img src="./Estrellas/4.png" width="150px">-->
             <p class="card-text p-2"">' . substr($serie["descripcion"], 0, 100)  . '...</p>
             <a href="#" class="btn btn-warning botones_vermas p-2"><b>VER MAS</b></a>
           </div>

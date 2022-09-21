@@ -15,7 +15,7 @@
 
     .info-serie {
       position: absolute;
-      top: 50%;
+      top: 55%;
       transform: translate(50%, -50%);
       z-index: 5;
       width: 50%;
@@ -28,6 +28,7 @@
     .info-serie-derecha{
       color: white;
       width: 300px;
+      height: 550px;
     }
 
     .info-serie-izquierda{
@@ -35,6 +36,7 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
+      height: 550px;
     }
 
     @media (max-width: 1000px) {
@@ -51,14 +53,20 @@
     }
 
     .descripcion{
-      font-size: 16px;
-
+      font-size: 15px;
+      text-align: justify
     }
 
     .poster-serie{
-      border-radius: 25px;
+      border-radius: 5px;
 
     }
+
+    .titulo-serie{
+      font-size: 3em;
+      font-weight: bold;
+    }
+
     .contenedorComentarios{
       width: 100%;
       border-radius: 25px;

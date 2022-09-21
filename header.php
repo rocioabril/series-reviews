@@ -1,4 +1,4 @@
-<header class="row navbar" >
+<header class="row navbar fixed-top" >
     <div class="col-1">
         <img class="logo" src="./img/logo.png" alt="logo" title="logo">
     </div>

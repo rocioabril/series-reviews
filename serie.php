@@ -69,15 +69,16 @@
                 <div class='botones'>
                       <!-- Button trigger modal -->
                   <a href='valorar.php'  data-bs-toggle='modal' data-bs-target='#valorarModal' class='btn btn-warning m-1'>
-                        Puntuar
+                        <b>Puntuar</b>
                   </a>
                       <!-- End button trigger modal -->
-                  <button type='submit' class='btn btn-warning  m-1'>Agregar a mi lista</button>";
+                  <button type='submit' class='btn btn-warning  m-1'><b>Agregar a mi lista</b></button>";
                   include('valorar.php');
                 echo "</div>
               </div>
               <div class='info-serie-derecha'>
                 <h1 class='titulo-serie'>$titulo</h1>
+                <!-- <img src='./Estrellas/4.png'width='150px'> -->
                 <p class='descripcion'>$descripcion</p>
               </div>
             </div>
