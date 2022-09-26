@@ -27,6 +27,14 @@
         font-size: 1.5em;
         font-weight: bold;
     }
+
+    .card_serie{
+        width: 15rem;
+    }
+
+    .card_serie:hover{
+        width: 16rem;
+    }
     
 </style>
     <div class="container_buscador_series d-flex p-2 m-5">
@@ -79,7 +87,7 @@ $resultado_consulta->fetch_assoc();
 
     foreach($resultado_consulta as $serie){
         echo '
-        <div class="card text-bg-dark mb-3 " style="width: 15rem;">
+        <div class="card text-bg-dark mb-3 card_serie">
 
           <img src="./Posters/'. $serie["poster"] . '" class="card-img-top img_cards img-responsive" alt="poster de ' . $serie["poster"] . '">
           <div class="card-body d-flex flex-column mb-3">

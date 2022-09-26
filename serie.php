@@ -61,7 +61,7 @@
 
       echo "
           <main>
-            <div style='background-image:url(\"./Posters/$poster\");height:700px;background-position:center;background-repeat:no-repeat;background-size:cover;z-index:5;' class='background-series'></div>
+            <div style='background-image:url(\"./Posters/$poster\");height:700px;background-position:center;background-repeat:no-repeat;background-size:cover;z-index:5;filter:blur(8px);' class='background-series'></div>
             <div class='background-black'></div>
             <div class='info-serie'>
               <div class='info-serie-izquierda'>
