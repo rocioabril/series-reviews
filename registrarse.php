@@ -25,12 +25,7 @@
     <section class="formulario_login">
         <form action="" method="POST" class="needs-validation">
             <div class="form-group m-3">
-              <label for="nombre">Nombre</label>
-              <input type="test" class="form-control" id="nombreRegistro" name="nombreRegistro"  placeholder="Tu nombre" class="normal" required>
-              <small class="invalid-feedback">Este campo no puede permanecer vacío</small>
-            </div>
-            <div class="form-group m-3">
-                <label for="user">Nombre de usuario</label>
+                <label for="usuarioRegistro">Nombre de usuario</label>
                 <input type="test" class="form-control" id="usuarioRegistro" name="usuarioRegistro"  placeholder="Elije tu nombre de usuario" required>
                 <div class="invalid-feedback">Este campo no puede permanecer vacío</div>
             </div>
@@ -105,4 +100,25 @@
 
 </html>
 <!-- fin del modal -->
+
+<?php 
+if($_POST){
+$nombre = $_POST['nombre'];
+$usuario = $_POST['usuarioRegistro'];
+$password = $_POST['passwordRegistro'];
+
+include("funciones.php");
+
+$conexion = conectar_db();
+
+$filtro = $_GET["filtro"];
+
+$consulta = "INSERT INTO usuarios (	nombre_usuario, password_usuario, column3, ...)
+VALUES (value1, value2, value3, ...);";
+
+$resultado_consulta = $conexion->query($consulta);
+
+$resultado_consulta->fetch_assoc();
+}
+                ?>
 
