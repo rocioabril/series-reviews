@@ -28,6 +28,7 @@
                 <label for="usuarioRegistro">Nombre de usuario</label>
                 <input type="test" class="form-control" id="usuarioRegistro" name="usuarioRegistro"  placeholder="Elije tu nombre de usuario" required>
                 <div class="invalid-feedback">Este campo no puede permanecer vacío</div>
+                <div class="invalid-feedback2">Este nombre de usuario ya existe</div>
             </div>
             <div class="form-group m-3">
                 <label for="password">Contraseña</label>
@@ -101,24 +102,38 @@
 </html>
 <!-- fin del modal -->
 
+
 <?php 
-if($_POST){
-$nombre = $_POST['nombre'];
-$usuario = $_POST['usuarioRegistro'];
-$password = $_POST['passwordRegistro'];
 
-include("funciones.php");
+    include("functions.php");
 
-$conexion = conectar_db();
+    if($_POST){
+      $usuario = $_POST['usuarioRegistro'];
+      $password = $_POST['passwordRegistro'];
 
-$filtro = $_GET["filtro"];
+    $conexion = conectar_db();
 
-$consulta = "INSERT INTO usuarios (	nombre_usuario, password_usuario, column3, ...)
-VALUES (value1, value2, value3, ...);";
+    //pido los usuarios que tengan el mismo nombre de usuario que el que me han puesto en el formulario y los guardo en una variable
+    $sql = "SELECT * FROM usuario WHERE nombre_usuario = '$usuario'"; 
 
-$resultado_consulta = $conexion->query($consulta);
+    $result = $conexion->query($sql);
+    $numResult = $result->num_rows;
 
-$resultado_consulta->fetch_assoc();
-}
-                ?>
 
+    //verifico que exista el usuario
+    if($numResult > 0){
+        echo "Ya existe un usuario con ese nombre";
+        //que me avise que ya existe el nombre de usuario y me pida que ponga otro
+    } 
+
+    else {
+        $sql = "INSERT INTO usuarios (nombre_usuario, password_usuario)
+        VALUES ( '$usuario', '$password')";
+        //que se imprima en pantalla que ya creaste tu cuenta y que inicies sesion
+    }
+
+    $result = $conexion->query($sql);
+
+    }
+
+?>
