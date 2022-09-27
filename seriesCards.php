@@ -11,7 +11,7 @@
     .container_cards{
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
+        /*gap: 30px;*/
         justify-content: center;
     }
 
@@ -30,10 +30,13 @@
 
     .card_serie{
         width: 15rem;
+        margin: 15px;
     }
 
-    .card_serie:hover{
-        width: 16rem;
+    .card_serie { transition: all .2s ease-in-out; }
+    .card_serie:hover { 
+        transform: scale(1.03); 
+        cursor: pointer;
     }
     
 </style>
@@ -93,7 +96,7 @@ $resultado_consulta->fetch_assoc();
           <div class="card-body d-flex flex-column mb-3">
             <h5 class="card-title p-2"">' . $serie["titulo"] . '</h5>
             <!--<img src="./Estrellas/4.png" width="150px">-->
-            <p class="card-text p-2"">' . substr($serie["descripcion"], 0, 100)  . '...</p>
+            <p class="card-text p-2"">' . substr($serie["descripcion"], 0, 70)  . '...</p>
             <a href="serie.php?id_series=' . $serie["id_series"] . '" id="ver_mas" class="btn btn-warning botones_vermas p-2"><b>VER MAS</b></a>
           </div>
         </div>';
