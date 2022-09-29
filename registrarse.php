@@ -105,34 +105,47 @@
 
 <?php 
 
-    include("functions.php");
+    /*include("functions.php");*/
 
     if($_POST){
       $usuario = $_POST['usuarioRegistro'];
       $password = $_POST['passwordRegistro'];
+      
+      $conexion = conectar_db();
 
-    $conexion = conectar_db();
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "proyectodaw"; 
 
-    //pido los usuarios que tengan el mismo nombre de usuario que el que me han puesto en el formulario y los guardo en una variable
-    $sql = "SELECT * FROM usuario WHERE nombre_usuario = '$usuario'"; 
+      //Checkear conexion
 
-    $result = $conexion->query($sql);
-    $numResult = $result->num_rows;
+      if($conexion->connect_error) {
+        die("connection failed: " .$conexion->connect_error);
+    }
+
+    //Hacer consulta
+    $sql = "SELECT * FROM usuarios WHERE nombre_usuario = '$usuario'"; //comprueba si existe el usuario  de la tabla usuarios en  el campo "nombre_usuario" 
+
+    $resultado = $conexion->query($sql); // Hacemos la consulta y recogemos el resultado
+
+    $resultado->fetch_assoc();
+    
+    $numResult = $resultado->num_rows;
 
 
     //verifico que exista el usuario
     if($numResult > 0){
         echo "Ya existe un usuario con ese nombre";
-        //que me avise que ya existe el nombre de usuario y me pida que ponga otro
-    } 
-
-    else {
+        
+    }else {
+       
         $sql = "INSERT INTO usuarios (nombre_usuario, password_usuario)
         VALUES ( '$usuario', '$password')";
-        //que se imprima en pantalla que ya creaste tu cuenta y que inicies sesion
+        
     }
 
-    $result = $conexion->query($sql);
+    $resultado = $conexion->query($sql);
 
     }
 
