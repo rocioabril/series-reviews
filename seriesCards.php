@@ -86,10 +86,11 @@ $resultado_consulta = $conexion->query($consulta);
 $resultado_consulta->fetch_assoc();
 
 
-    echo '<div id="cards_series" class="container_cards">';
+    echo '<div id="cards_series" class="container_cards" >';
 
     foreach($resultado_consulta as $serie){
         echo '
+        <a href="serie.php?id_series=' . $serie["id_series"] . '" id="ver_mas" style="color:white;text-decoration:none;">
         <div class="card text-bg-dark mb-3 card_serie">
 
           <img src="./Posters/'. $serie["poster"] . '" class="card-img-top img_cards img-responsive" alt="poster de ' . $serie["poster"] . '">
@@ -97,9 +98,11 @@ $resultado_consulta->fetch_assoc();
             <h5 class="card-title p-2"">' . $serie["titulo"] . '</h5>
             <!--<img src="./Estrellas/4.png" width="150px">-->
             <p class="card-text p-2"">' . substr($serie["descripcion"], 0, 70)  . '...</p>
-            <a href="serie.php?id_series=' . $serie["id_series"] . '" id="ver_mas" class="btn btn-warning botones_vermas p-2"><b>VER MAS</b></a>
+            <button class="btn btn-warning botones_vermas p-2"><b>VER MAS</b></button>
           </div>
-        </div>';
+        </div>
+        </a>';
+        
         }
     
 echo '</div>';
